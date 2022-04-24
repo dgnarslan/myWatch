@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+$primary-color: #333;
+$secondary-color: #fff;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  &.dark {
+    .header {
+      background-color: $primary-color;
+      color: $secondary-color !important;
+      span {
+        .userName {
+          color: $secondary-color;
+        }
+      }
+    }
+    .hour {
+      background-color: $primary-color;
+      color: $secondary-color;
+      .time-container {
+        .time-items {
+          background-color: $secondary-color;
+          color: $primary-color;
+        }
+      }
+      .date {
+        color: $secondary-color;
+      }
+    }
+    .github-link {
+      background-color: $secondary-color;
+      color: $primary-color !important;
+      &::before {
+        color: $primary-color;
+      }
+      a {
+        color: $primary-color;
+      }
+    }
+  }
+  .header {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+    color: $primary-color;
+    span {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-center;
+      h4 {
+        font-weight: 400;
+        font-size: 36px;
+      }
+      .userName {
+        font-size: 38px;
+        color: $primary-color;
+        text-transform: capitalize;
+        margin-left: 10px;
+      }
+    }
+  }
+  .hour {
+    width: 100%;
+    height: calc(100% - 240px);
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    h2 {
+      margin-top: 100px;
+    }
+    .time-container {
+      width: 50%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .time-items {
+        width: calc(100% / 3 - 20px);
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        border-radius: 20px;
+        color: $secondary-color;
+        font-size: 48px;
+        margin-bottom: 100px;
+        &:not(:first-child) {
+          position: relative;
+          &::before {
+            content: ':';
+            position: absolute;
+            display: grid;
+            place-items: center;
+            left: -25px;
+            height: 100%;
+            color: $primary-color;
+            font-size: 72px;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+    .date {
+      width: 100%;
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+  }
+  .github-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $primary-color;
+    transition: 300ms all;
+    a {
+      width: 0;
+      height: 100%;
+      transform: translateX(-300px);
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: $secondary-color;
+      overflow-x: hidden;
+      opacity: 0;
+      transition: 600ms transform, 600ms opacity;
+    }
+    &::before {
+      content: '\f113';
+      font-family: 'FontAwesome';
+      display: grid;
+      place-items: center;
+      height: 100%;
+      width: 100%;
+      color: $secondary-color;
+      font-size: 20px;
+      position: absolute;
+      transition: 300ms all;
+    }
+    &:hover {
+      width: 140px;
+      &::before {
+        opacity: 0;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+  .theme-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 300ms all;
+    background-color: $primary-color;
+    display: grid;
+    place-items: center;
+    color: $secondary-color;
+    &::before {
+      content: '\f186';
+      font-family: 'FontAwesome';
+      display: grid;
+      place-items: center;
+      height: 100%;
+      width: 100%;
+      color: $secondary-color;
+      font-size: 20px;
+      position: absolute;
+      transition: 300ms all;
+    }
+    &.dark-btn {
+      background-color: $secondary-color;
+      color: $primary-color;
+      &::before {
+        content: '\f185';
+        font-family: 'FontAwesome';
+        color: $primary-color;
+      }
+    }
+  }
+}
