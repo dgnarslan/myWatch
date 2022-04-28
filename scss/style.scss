@@ -39,8 +39,14 @@ body {
         .time-items {
           background-color: $secondary-color;
           color: $primary-color;
+          &:not(:first-child) {
+            &::before {
+              color: $secondary-color;
+            }
+          }
         }
       }
+
       .date {
         color: $secondary-color;
       }
@@ -218,3 +224,5 @@ body {
     }
   }
 }
+
+@import 'responsive';
