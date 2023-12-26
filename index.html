@@ -1,43 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Clock</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Vite + React</title>
   </head>
   <body>
-    <div class="main" id="theme">
-      <div class="github-link">
-        <a href="https://github.com/dgnarslan/myWatch">Source Code</a>
-      </div>
-      <div class="theme-button" onclick="changeTheme()" id="changeButton"></div>
-      <div class="header">
-        <span>
-          <h4>Merhaba</h4>
-          <p id="userName" class="userName">Misafir</p>
-        </span>
-        <p>Günün nasıl geçiyor...</p>
-      </div>
-      <div class="hour">
-        <!-- Clock -->
-        <h2>Saat</h2>
-        <div class="time-container">
-          <div class="time-items"><p id="hour"></p></div>
-          <div class="time-items"><p id="minute"></p></div>
-          <div class="time-items"><p id="second"></p></div>
-        </div>
-        <p id="date" class="date"></p>
-      </div>
-    </div>
-
-    <script src="js/main.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

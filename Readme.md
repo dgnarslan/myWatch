@@ -1,33 +1,8 @@
-# My Watch
+# React + Vite
 
-Bu repo [Patika.Dev](https://www.patika.dev) Front-End Eğitiminde ödev olarak yapmış olduğum Local Zaman Takip uygulaması.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![lightTheme](img/light-theme.PNG)
-![darkTheme](img/dark-theme.PNG)
+Currently, two official plugins are available:
 
-## Installation
-
-Öncelikle projeyi clonelayın.[My Time](https://github.com/dgnarslan/myWatch.git)
-
-```bash
-git clone https://github.com/dgnarslan/myWatch.git
-```
-
-## Usage
-
-Projeyi cloneladıktan sonra Visual Studio Code programında açınız.
-
-Linux için:
-
-```linux
-cd myWatch
-code .
-```
-
-## Contributing
-
-Pull requestler kabul edilir.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
