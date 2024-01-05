@@ -4,7 +4,7 @@ import Header from "~/pages/home/sections/header/index.jsx";
 import Footer from "~/pages/home/sections/footer/index.jsx";
 import useColorScheme from "~/hooks/use-color-scheme.js";
 import {useTheme} from "~/stores/pageTheme/hooks.js";
-import Appearence from "~/pages/home/components/appearence/index.jsx";
+import Appearance from "~/pages/home/components/appearance/index.jsx";
 
 export default function Home(){
 
@@ -47,21 +47,26 @@ export default function Home(){
 
         return(
 
-            <main className='w-full min-h-dvh flex flex-col items-center justify-between pt-20'>
-                <Appearence/>
+            <main
+                className='w-full min-h-dvh flex flex-col items-center justify-between pt-20'
+            >
+                <Appearance/>
                 <Header/>
                 <section
-                    className='max-w-screen-2xl w-full flex flex-col gap-10 text-start text-4xl dark:text-[#ffffffa6] font-bold px-20 min-h-96'>
-                    <p>Saat :</p>
+                    className='lg:max-w-screen-2xl w-full flex flex-col gap-y-10 text-start text-4xl dark:text-[#ffffffe3] font-bold lg:px-20 md:px-10 px-2.5 min-h-96'
+                >
+                    <p>
+                        Saat :
+                    </p>
                     <section
-                        className='w-full gap-10 grid grid-cols-3 place-items-center text-white dark:text-[#ffffffa6] '
+                        className='w-full lg:gap-10 md:gap-10 gap-5 grid grid-cols-3 place-items-center text-white dark:text-[#ffffffe3]'
                     >
                         <ClockSection time={time.hours}/>
                         <ClockSection time={time.minutes}/>
                         <ClockSection time={time.seconds}/>
                     </section>
                 </section>
-                <Footer title={time.date}/>
+                <Footer history={time.date}/>
             </main>
 
         )

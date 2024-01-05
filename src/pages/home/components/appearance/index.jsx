@@ -6,7 +6,7 @@ import {useTranslation} from "react-i18next";
 import useColorScheme from "~/hooks/use-color-scheme.js";
 import {useTheme} from "~/stores/pageTheme/hooks.js";
 
-export default function Appearence(){
+export default function Appearance(){
     const { t } = useTranslation()
     const theme = useTheme()
     const { colorScheme } = useColorScheme()

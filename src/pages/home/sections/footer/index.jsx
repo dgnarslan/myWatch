@@ -1,7 +1,9 @@
-export default function Footer({title}){
+export default function Footer({history}){
     return (
-        <footer className='w-full h-20 bg-[#333] flex items-center justify-center text-4xl text-center text-white dark:text-[#ffffffa6] '>
-            <p>{title}</p>
+        <footer
+            className='w-full h-20 bg-[#333] dark:bg-[#111] flex items-center justify-center text-4xl text-center text-white'
+        >
+            <p>{history}</p>
         </footer>
     )
 }
